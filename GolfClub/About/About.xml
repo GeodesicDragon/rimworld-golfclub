@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Golf Club</name>
+	<author>GeodesicDragon</author>
+	<packageId>geodesicdragon.golfclub</packageId>
+	<url>https://discord.gg/BGKnpza</url>
+	<supportedVersions>
+		<li>1.1</li>
+		<li>1.0</li>
+	</supportedVersions>
+	<description>The game of golf is very popular on the glitterworlds, though not so much on the rimworlds where many players found themselves stranded after their escape pods crashed.\n\nNaturally, it didn't take long for these survivors to start using their clubs as weapons, though they are still managing to play the game itself.\n\nINCLUDES THE FOLLOWING:\n\n- Golf club (melee)\n- Golf club (ranged)\n- Putting hole</description>
+</ModMetaData>
+
+<!--CHANGELOG
+
+Version 1.2.2 (May 15th 2020)
+
+* Added golf club (ranged), a slow firing weapon with poor accuracy that is capable of doing a fair chunk of damage on a successful hit.
+* Added putting hole, a recreation item that trains your colonists shooting skill at a slightly better rate than the horseshoes pin and hoopstone ring.
+* Reduced work amount of making golf club (melee) to 600 (was 6000).
+
+Thanks to dninemfive for suggesting that I add these items.
+
+Version 1.0.1 (May 14th 2020)
+
+- Initial Release.-->
