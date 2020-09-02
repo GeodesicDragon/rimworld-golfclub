@@ -10,24 +10,30 @@
     <graphicData>
       <texPath>Things/GolfClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1,1)</drawSize>
     </graphicData>
-    <uiIconScale>2</uiIconScale>
+    <uiIconScale>1</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>75</costStuffCount>
-    <statBases>
-      <WorkToMake>600</WorkToMake>
-      <Mass>2</Mass>
-    </statBases>
-    <equippedAngleOffset>-65</equippedAngleOffset>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>3</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+    <costStuffCount>125</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
     </stuffCategories>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <!--<equippedAngleOffset>-65</equippedAngleOffset>-->
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	    <recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+    </recipeMaker>
     <weaponTags>
       <li>MedievalMeleeDecent</li>
     </weaponTags>
@@ -37,7 +43,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>9</power>
+        <power>6</power>
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
@@ -45,7 +51,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>20</power>
+        <power>13</power>
         <cooldownTime>2.5</cooldownTime>
       </li>
     </tools>
@@ -65,6 +71,7 @@
       <shaderType>Transparent</shaderType>
     </graphicData>
   </ThingDef>
+  
     <ThingDef ParentName="BaseBullet">
     <defName>Projectile_GolfBall</defName>
     <label>golf ball</label>
@@ -74,43 +81,50 @@
     </graphicData>
     <projectile>
       <damageDef>Blunt</damageDef>
-      <damageAmountBase>25</damageAmountBase>
-      <stoppingPower>2</stoppingPower>
-      <speed>90</speed>
+      <damageAmountBase>15</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>75</speed>
     </projectile>
   </ThingDef>
-  
+
     <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GolfClub_Ranged</defName>
     <label>golf club (ranged)</label>
-    <description>Why get up close and personal when you can simply use your enemies to improve your game?</description>
+    <description>Why get up close and personal when you can simply fire balls at your enemies from afar?</description>
     <graphicData>
       <texPath>Things/GolfClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1,1)</drawSize>
     </graphicData>
-    <uiIconScale>2</uiIconScale>
+    <uiIconScale>1</uiIconScale>
     <soundInteract>Standard_Pickup</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <WorkToMake>600</WorkToMake>
+      <WorkToMake>900</WorkToMake>
       <Mass>2</Mass>
-      <AccuracyTouch>0.35</AccuracyTouch>
-      <AccuracyShort>0.45</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
-      <AccuracyLong>0.80</AccuracyLong>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
-    <costList>
-      <Steel>30</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-    </costList>
+<costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>5</Crafting>
+        <Crafting>3</Crafting>
       </skillRequirements>
+	    <recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
     </recipeMaker>
     <verbs>
       <li>
@@ -119,7 +133,7 @@
         <defaultProjectile>Projectile_GolfBall</defaultProjectile>
         <warmupTime>2</warmupTime>
         <range>30</range>
-        <soundCast>Misc/Swish1</soundCast>
+        <soundCast>ThrowGrenade</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
@@ -130,7 +144,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>9</power>
+        <power>6</power>
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
@@ -138,7 +152,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>20</power>
+        <power>13</power>
         <cooldownTime>2.5</cooldownTime>
       </li>
     </tools>
@@ -165,7 +179,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
-    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
+    <minTechLevelToBuild>Neolithic</minTechLevelToBuild>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <thingCategories>
       <li>BuildingsJoy</li>
@@ -178,9 +192,7 @@
       <JoyGainFactor>1.5</JoyGainFactor>
     </statBases>
     <stuffCategories>
-      <li>Metallic</li>
       <li>Woody</li>
-      <li>Stony</li>
     </stuffCategories>
     <building>
       <joyKind>Gaming_Dexterity</joyKind>

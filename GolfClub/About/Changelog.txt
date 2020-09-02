@@ -1,0 +1,39 @@
+Version 1.2.20 (August 20th 2020)
+
+* Mod is now compatible with the RimWorld 1.2 patch.
+
+Version 1.2.19 (June 1st 2020)
+
+* Reduced melee damage and power of golf clubs by approximately one third.
+* Increased stuff cost of making golf clubs to 125 (was 75).
+* Tribal factions are now able to build putting holes.
+
+Version 1.2.16 (May 22nd 2020)
+
+* Reduced accuracy of golf club (ranged) by 0.2 across all ranges (touch, short, medium, long).
+* Increased base damage of golf club (ranged) to 30 (was 25).
+* Reduced projectile speed of golf club (ranged) to 75 (was 90).
+* Reduced base damage of golf balls (projectile) to 15 (was 30).
+* Reduced stopping power of golf balls (projectile) to 1 (was 2).
+	* Author's Note: I noticed that even a good quality ranged club was killing some targets in one hit; reducing damage and stopping power of golf balls should make that less likely to happen.
+* Changed recipe of golf club (ranged) to use the same format as the melee version (75 wood or metal instead of steel and components).
+* Increased work cost of both golf clubs to 900 (was 600).
+* Fixed error on startup about an invalid sound; the ranged golf club now uses the same sound as throwing a grenade.
+	* Author's Note: Throwing a grenade makes a sort of 'swoosh' noise; it's the closest thing I could find to the sound of a golf club being swung.
+* Recipes to make golf clubs should now appear at both variants of the smithy.
+* Putting hole can no longer be made using stone blocks or metals.
+* Both variants of the golf club can now be made at a crafting spot.
+* Reduced crafting skill requirement of golf club (ranged) to 3 (was 5).
+* Changed golf club texture to something a little better.
+
+Version 1.2.2 (May 15th 2020)
+
+* Added golf club (ranged), a slow firing weapon with poor accuracy that is capable of doing a fair chunk of damage on a successful hit.
+* Added putting hole, a recreation item that trains your colonists shooting skill at a slightly better rate than the horseshoes pin and hoopstone ring.
+* Reduced work amount of making golf club (melee) to 600 (was 6000).
+
+Thanks to dninemfive for suggesting that I add these items.
+
+Version 1.0.1 (May 14th 2020)
+
+- Initial Release.
