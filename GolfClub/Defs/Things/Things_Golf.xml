@@ -6,7 +6,7 @@
     <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
     <defName>MeleeWeapon_GolfClub</defName>
     <label>golf club (melee)</label>
-    <description>It still does what it was designed for, it's just that the balls are slightly different now.</description>
+    <description>It still does what it was designed for; it's just the balls that are slightly different now.</description>
     <graphicData>
       <texPath>Things/GolfClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -189,7 +189,7 @@
       <WorkToBuild>100</WorkToBuild>
       <Mass>3</Mass>
       <Flammability>1.0</Flammability>
-      <JoyGainFactor>1.5</JoyGainFactor>
+      <JoyGainFactor>1</JoyGainFactor>
     </statBases>
     <stuffCategories>
       <li>Woody</li>
