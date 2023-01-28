@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- GOLF CLUB (MELEE) -->
+
+    <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>MeleeWeapon_GolfClub</defName>
+    <label>golf club (melee)</label>
+    <description>It still does what it was designed for; it's just the balls that are slightly different now.</description>
+    <graphicData>
+      <texPath>Things/GolfClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <!--<equippedAngleOffset>-65</equippedAngleOffset>-->
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	    <recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+    </recipeMaker>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6.5</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+<!-- GOLF CLUB (RANGED) -->
+
+  <ThingDef Name="BaseProjectileGolf" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>ball</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+  
+    <ThingDef ParentName="BaseBullet">
+    <defName>Projectile_GolfBall</defName>
+    <label>golf ball</label>
+    <graphicData>
+      <texPath>Things/GolfBall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GolfClub_Ranged</defName>
+    <label>golf club (ranged)</label>
+    <description>Why get up close and personal when you can simply fire balls at your enemies from afar?</description>
+    <graphicData>
+      <texPath>Things/GolfClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+<costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	    <recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Projectile_GolfBall</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>25</range>
+        <soundCast>ThrowGrenade</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+	<tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6.5</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+<!-- PUTTING HOLE -->
+
+<ThingDef ParentName="BuildingBase">
+    <defName>PuttingHole</defName>
+    <label>putting hole</label>
+    <description>A simple game in which players try to get a stone into a hole using a golf club. It's relaxing, and trains shooting skills.</description>
+    <graphicData>
+      <texPath>Things/PuttingHole</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.08, 0.2, 0.08)</volume>
+        <offset>(0, 0, -0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.3,0.4,0.4)</rect>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <minTechLevelToBuild>Neolithic</minTechLevelToBuild>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <building>
+      <joyKind>Gaming_Dexterity</joyKind>
+      <watchBuildingStandDistanceRange>5~5</watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+      <watchBuildingInSameRoom>true</watchBuildingInSameRoom>
+    </building>
+    <costStuffCount>10</costStuffCount>
+    <pathCost>10</pathCost>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef>
+  
+    <JoyGiverDef>
+    <defName>Practice_Putting</defName>
+    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <baseChance>2.5</baseChance>
+    <thingDefs>
+      <li>PuttingHole</li>
+    </thingDefs>
+    <jobDef>UsePuttingHole</jobDef>
+    <desireSit>false</desireSit>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+    <JobDef>
+    <defName>UsePuttingHole</defName>
+    <driverClass>JobDriver_PlayHoopstone</driverClass>
+    <reportString>practicing putting.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>3</joyMaxParticipants>
+    <joySkill>Shooting</joySkill>
+	<joyXpPerTick>0.005</joyXpPerTick>
+    <joyKind>Gaming_Dexterity</joyKind>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  </Defs>

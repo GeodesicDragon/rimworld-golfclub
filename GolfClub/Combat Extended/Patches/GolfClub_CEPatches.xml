@@ -1,0 +1,83 @@
+<Patch>
+
+	<!--MELEE-->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_GolfClub"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>shaft</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<chanceFactor>0.25</chanceFactor>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>0.125</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6.5</power>
+					<cooldownTime>2.5</cooldownTime>
+					<armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+	
+	<!--RANGED-->
+	
+<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GolfClub_Ranged</defName>
+    <statBases>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.3</SightsEfficiency>
+      <ShotSpread>0.5</ShotSpread>
+      <SwayFactor>2</SwayFactor>
+      <Bulk>3</Bulk>
+      <!-- <ToughnessRating>2.5</ToughnessRating> --> <!-- Base toughness rating of a weapon -->
+      <WorkToMake>900</WorkToMake>
+    </statBases>
+	<costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <Properties>
+      <recoilAmount>3</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Projectile_GolfBall</defaultProjectile>
+      <warmupTime>2</warmupTime>
+      <range>25</range>
+      <soundCast>ThrowGrenade</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>0</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>1</magazineSize>
+      <reloadTime>3</reloadTime>
+      <ammoSet>AmmoSet_GolfBall</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo_GolfBall</defName>
+		<label>Golf Balls</label>
+		<parent>Ammo</parent>
+		<iconPath>Things/Ammo/Ammo_GolfBall</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_GolfBalls</defName>
+		<label>golf balls</label>
+		<ammoTypes>
+			<Ammo_GolfBall>Projectile_GolfBall</Ammo_GolfBall>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="SpacerSmallAmmoBase">
+		<defName>Ammo_GolfBall</defName>
+		<label>golf balls</label>
+		<description>A package containing golf balls.\n\nSimple, but effective.</description>
+		<statBases>
+			<Mass>0.015</Mass>
+			<Bulk>0.01</Bulk>
+			<MarketValue>0.25</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<!--<li>CE_AutoEnableCrafting_FabricationBench</li>-->
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo_GolfBall</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Ammo/Ammo_GolfBall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<ammoClass>FullMetalJacket</ammoClass>
+	</ThingDef>
+
+	<!-- Projectile is already defined elsewhere -->
+
+	<!-- Recipes -->
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_GolfBall</defName>
+		<label>make golf ball x50</label>
+		<description>Craft a box of 50 golf balls.</description>
+		<jobString>Making golf balls.</jobString>
+		<workAmount>600</workAmount>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_GolfBall>50</Ammo_GolfBall>
+		</products>
+	</RecipeDef>
+
+</Defs>
